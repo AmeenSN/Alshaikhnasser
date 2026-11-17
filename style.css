@@ -1,0 +1,71 @@
+:root{color-scheme:light;--paper:#f6f4ed;--ink:#282d26;--muted:#666b5e;--line:#d9dbce;--olive:#4c5938}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:3px solid var(--olive);outline-offset:6px}
+.page{width:min(1120px,calc(100% - 96px));margin:auto}
+.skip-link{position:absolute;left:20px;top:-100px;padding:15px;background:var(--ink);color:var(--paper);z-index:10}
+.skip-link:focus{top:15px}
+.site-header{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:32px 0;border-bottom:1px solid var(--line)}
+.signature{display:flex;align-items:center;gap:13px;font-size:13px;font-weight:600;letter-spacing:-.1px}
+.monogram{display:grid;place-items:center;border:1px solid var(--ink);border-radius:50%;width:38px;height:38px;font:italic 20px Georgia,serif;padding-bottom:3px}
+.nav-link{font-size:12px;display:flex;align-items:center;gap:26px;padding:12px 0}
+.nav-link span{font-size:20px}
+.intro{padding:74px 0 59px}
+.eyebrow{display:flex;align-items:center;gap:10px;font-size:10px;letter-spacing:1.9px;text-transform:uppercase;font-weight:600;margin:0 0 28px;color:var(--olive)}
+.small-star{font-size:22px;line-height:1}
+h1{font:400 clamp(54px,7.2vw,96px)/1.01 Georgia,'Times New Roman',serif;letter-spacing:-4px;margin:0}
+h1 em{font-weight:400;color:var(--olive)}
+.intro-bottom{display:flex;align-items:end;justify-content:space-between;gap:24px;margin-top:30px}
+.intro-bottom p{font-size:18px;margin:0;color:var(--muted)}
+.intro-note{font-size:11px;color:var(--muted);display:flex;gap:20px;align-items:center}
+.intro-note span{font-size:24px;color:var(--olive)}
+.projects{padding-top:24px;border-top:1px solid var(--line)}
+.section-heading{display:flex;align-items:center;justify-content:space-between;margin-bottom:24px}
+h2{font-size:11px;font-weight:600;letter-spacing:1.6px;text-transform:uppercase;margin:0}
+.project-total{font:10px monospace;color:var(--muted)}
+.project-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px}
+.project{display:block;min-width:0}
+.art{position:relative;aspect-ratio:1.5;overflow:hidden;border-radius:5px}
+.art-label,.art-foot{position:absolute;z-index:1;left:25px;right:25px;font-size:8px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase}
+.art-label{top:23px}.art-foot{bottom:22px}
+.dune-art{background:#a5d1ca;color:#433b2a}
+.dunes{position:absolute;width:100%;height:100%;inset:0;transition:transform .5s ease}
+.dune-wordmark{position:absolute;left:25px;top:64px;font:900 clamp(35px,4.2vw,55px)/.88 Arial,Helvetica,sans-serif;letter-spacing:-2px;color:#454c35}
+.dune-wordmark i{font-style:normal;color:#795234}
+.dune-art .art-foot{color:#fff3d6}
+.oil-art{background:#e9b97e;color:#4a2f1f}
+.oilfield{position:absolute;width:100%;height:100%;inset:0;transition:transform .5s ease}
+.oil-wordmark{position:absolute;left:25px;top:64px;font:900 clamp(35px,4.2vw,55px)/.88 Arial,Helvetica,sans-serif;letter-spacing:-2px;color:#3b2a20}
+.oil-wordmark i{font-style:normal;color:#9c4a26}
+.oil-art .art-foot{color:#fbe7c6}
+.oil-art .beam{transform-box:view-box;transform-origin:418px 220px;transition:transform .5s ease}
+.hearts-art{background:radial-gradient(ellipse at 50% 30%,#2b5040,#102d24);color:#d4c591}
+.hearts-art:before{content:'';position:absolute;inset:0;opacity:.3;background:repeating-linear-gradient(45deg,transparent 0 3px,#ffffff07 3px 4px)}
+.card-scene{position:absolute;inset:0;display:flex;justify-content:center;align-items:center;padding-top:5px}
+.playing-card{width:29%;aspect-ratio:2/3;max-height:230px;border-radius:7px;background:#ede5d3;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;box-shadow:0 12px 28px #0004;position:relative;transition:transform .4s ease}
+.playing-card:after{content:'';position:absolute;inset:9px;border:1px solid #a1987e66;border-radius:3px}
+.playing-card span{font:64px Georgia,serif}.playing-card small{font-size:7px;letter-spacing:2px}
+.heart-card{color:#94463a;transform:rotate(-15deg) translateX(12px) translateY(1px)}
+.spade-card{color:#29382d;transform:rotate(12deg) translateX(-7px) translateY(7px)}
+.project-content{padding:21px 1px 0}
+.project-kicker{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:1px}
+.project-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:13px}
+h3{font:400 clamp(25px,3vw,32px)/1.2 Georgia,serif;letter-spacing:-.8px;margin:0}
+.round-arrow{display:grid;place-items:center;flex-shrink:0;border:1px solid #b5bba9;border-radius:50%;width:33px;height:33px;font-size:19px;transition:background .2s,color .2s}
+.project-content p{font-size:13px;color:var(--muted);line-height:1.8;margin:13px 0 20px;max-width:45ch}
+.project-action{font-size:11px;font-weight:600;display:inline-flex;align-items:center;gap:22px;border-bottom:1px solid #9da68b;padding-bottom:7px}
+.project:hover .round-arrow{background:var(--ink);color:var(--paper)}
+.project:hover .dunes,.project:hover .oilfield{transform:scale(1.035)}
+.project:hover .oil-art .beam{transform:rotate(-7deg)}
+.project:hover .heart-card{transform:rotate(-19deg) translateX(7px)}
+.project:hover .spade-card{transform:rotate(16deg) translateX(-3px) translateY(4px)}
+.site-footer{display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line);margin-top:62px;padding:25px 0 30px;color:var(--muted);font-size:10px}
+.site-footer>span:last-child{display:flex;align-items:center;gap:13px}.footer-star{font-size:22px;color:var(--olive)}
+@media(min-width:1500px){.intro{padding-top:90px}}
+@media(max-width:1000px) and (min-width:701px){.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.project:last-child{grid-column:1/-1}.project:last-child .art{aspect-ratio:2.6}}
+@media(min-width:1001px){.dune-wordmark,.oil-wordmark{font-size:clamp(32px,3.2vw,42px)}}
+@media(max-width:700px){.page{width:calc(100% - 40px)}.site-header{padding:22px 0}.signature{font-size:11px;gap:9px}.nav-link{gap:10px;font-size:11px}.intro{padding:52px 0 39px}h1{font-size:clamp(43px,8.7vw,60px);letter-spacing:-2px}.eyebrow{font-size:8px;letter-spacing:1.1px;margin-bottom:24px}.intro-bottom{align-items:start;flex-direction:column;gap:20px;margin-top:24px}.intro-bottom p{font-size:16px}.intro-note{font-size:10px}.project-grid{grid-template-columns:1fr;gap:38px}.dune-wordmark,.oil-wordmark{font-size:clamp(37px,10vw,60px)}.art{aspect-ratio:1.45}.project-content{padding-top:19px}.project-title h3{font-size:29px}.project-content p{max-width:none}.site-footer{margin-top:42px;align-items:start;font-size:9px}.site-footer>span:last-child{gap:6px}.footer-star{font-size:15px}.playing-card span{font-size:clamp(45px,14vw,70px)}}
+@media(max-width:360px){.signature>span:last-child{max-width:100px;line-height:1.4}.nav-link{gap:8px}.site-footer{flex-direction:column;gap:12px}.art-label{font-size:7px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
